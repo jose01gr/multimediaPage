@@ -1,0 +1,96 @@
+<app-header-admin></app-header-admin>
+<section class="section">
+  <div class="container is-flex is-align-items-center is-justify-content-center" style="height: 100vh;">
+    <div class="box" style="width: 40%;">
+      <h1 class="title has-text-centered">Configuración de Estilos</h1>
+      <form [formGroup]="estilosForm" (ngSubmit)="guardarEstilos()">
+
+        <!-- Inputs de colores -->
+        <div class="field">
+          <div class="columns">
+            <div class="column">
+              <label class="label">Color de Fondo</label>
+              <div class="control">
+                <input class="input" type="color" formControlName="colorFondo">
+              </div>
+            </div>
+            <div class="column">
+              <label class="label">Color de Texto</label>
+              <div class="control">
+                <input class="input" type="color" formControlName="colorTexto">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="columns">
+            <div class="column">
+              <label class="label">Color Primario</label>
+              <div class="control">
+                <input class="input" type="color" formControlName="colorPrimario">
+              </div>
+            </div>
+            <div class="column">
+              <label class="label">Color Secundario</label>
+              <div class="control">
+                <input class="input" type="color" formControlName="colorSecundario">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tamaños de letra -->
+        <div class="field" *ngFor="let campo of tamanoCampos">
+          <label class="label">{{ campo.label }}</label>
+          <div class="control">
+            <input class="input" type="number" [formControlName]="campo.nombre" step="0.1" min="0.5">
+          </div>
+        </div>
+
+        <!-- Inputs para cargar fuentes -->
+           <!-- Inputs para cargar fuentes -->
+           <div class="field">
+            <label class="label">Fuente Principal</label>
+            <div class="file is-small has-name">
+              <label class="file-label">
+                <input class="file-input" type="file" (change)="cargarArchivo($event, 'fuentePrincipal')" name="fuentePrincipal" />
+                <span class="file-cta">
+
+                  <span class="file-label">Seleccionar archivo</span>
+                </span>
+                <span class="file-name" *ngIf="nombreArchivoFuentePrincipal">{{ nombreArchivoFuentePrincipal }}</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Fuente Secundaria</label>
+            <div class="file is-small has-name">
+              <label class="file-label">
+                <input class="file-input" type="file" (change)="cargarArchivo($event, 'fuenteSecundaria')" name="fuenteSecundaria" />
+                <span class="file-cta">
+
+                  <span class="file-label">Seleccionar archivo</span>
+                </span>
+                <span class="file-name" *ngIf="nombreArchivoFuenteSecundaria">{{ nombreArchivoFuenteSecundaria }}</span>
+              </label>
+            </div>
+          </div>
+
+
+        <!-- Botones de guardar y restablecer -->
+        <div class="field">
+          <div class="control">
+            <button type="submit" class="save-button is-primary">
+              Guardar Cambios
+            </button>
+            <button type="button" class="reset-button" (click)="restablecerPredeterminado()">
+              Restablecer a valores predeterminados
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

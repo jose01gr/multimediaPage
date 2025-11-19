@@ -1,0 +1,108 @@
+/* Contenedor del carousel */
+#carousel {
+    margin: 30px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Para dejar espacio para los botones */
+  }
+  
+  /* Estilo para cada imagen en el carousel */
+  .carousel-item {
+    position: absolute;
+    opacity: 0;
+    transition: transform 400ms, opacity 400ms;
+  }
+  
+  .carousel-item img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+
+    
+    transition: width 400ms;
+    -webkit-user-drag: none;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+  }
+  
+  /* Imagen seleccionada */
+  .carousel-item.selected {
+    z-index: 10;
+    opacity: 1;
+    left: 50%;
+    transform: translateY(0) translateX(-50%);
+  }
+  
+  /* Imagen anterior */
+  .carousel-item.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  /* Imagen siguiente */
+  .carousel-item.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  /* Estilo para los botones */
+  /* Estilo para los botones */
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;  /* Reduces el espacio entre las imágenes y los botones */
+    margin-bottom: 30px;  /* Reduces el espacio entre los botones y las tarjetas */
+    ;
+}
+
+/* Botones con borde redondeado y sombra */
+.button-82-pushable {
+    margin: 0 10px; /* Espaciado entre los botones */
+    padding: 12px 20px; /* Espaciado interno (ajústalo según tu necesidad) */
+     
+    color: var(--color-texto);  /* Color del texto */
+    border: none;  /* Elimina el borde */
+    border-radius: 30px;  /* Redondear los bordes */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    font-size: 16px;  /* Tamaño de la fuente */
+    cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, box-shadow 0.3s;  /* Transición para el color de fondo y la sombra */
+}
+
+/* Efecto hover: cambia el color de fondo y la sombra */
+.button-82-pushable:hover {
+    background-color: var(--color-primario);  /* Color más oscuro al pasar el ratón */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada */
+}
+/* Contenedor de video */
+video {
+    width: 80%;  /* Ajusta el ancho del video, 80% del contenedor o del área disponible */
+    height: auto;  /* Mantiene la proporción original de la imagen */
+    max-width: 800px;  /* Asegura que el video no sea más grande que 600px */
+    margin: 0 auto;  /* Centra el video */
+    display: block;  /* Asegura que el video se comporte como un bloque y se centre */
+}
+
+.card{
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  
+}
+
+a,h2,p{
+  color: var(--color-texto);
+}
+
+h1{
+  color: var(--color-primario);
+}

@@ -1,0 +1,207 @@
+/* Estilos específicos para los botones */
+:host ::ng-deep .file.is-info .file-cta,
+:host ::ng-deep .file-cta,
+:host ::ng-deep .file-label,
+:host ::ng-deep button.upload-button,
+:host ::ng-deep button.save-button,
+:host ::ng-deep button.delete-button,
+:host ::ng-deep .button.is-info,
+:host ::ng-deep .button.is-primary,
+:host ::ng-deep .button.is-light,
+:host ::ng-deep .button.is-danger {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+  font-family: var(--fuente-secundaria) !important;
+}
+
+/* Asegurar que el texto e íconos dentro de los botones tengan el color correcto */
+:host ::ng-deep .file-label span,
+:host ::ng-deep .file-cta span,
+:host ::ng-deep .file-icon,
+:host ::ng-deep .file-label i,
+:host ::ng-deep .file-cta i {
+  color: var(--color-texto) !important;
+  font-family: var(--fuente-secundaria) !important;
+}
+
+/* Sobrescribir estilos de Bulma */
+:host ::ng-deep .file.is-info .file-cta,
+:host ::ng-deep .button.is-info,
+:host ::ng-deep .button.is-primary,
+:host ::ng-deep .button.is-danger,
+:host ::ng-deep .button.is-light {
+  background-color: var(--color-primario) !important;
+  border-color: transparent !important;
+}
+
+/* Efecto hover para todos los botones */
+:host ::ng-deep .file-cta:hover,
+:host ::ng-deep .file-label:hover,
+:host ::ng-deep button.upload-button:hover,
+:host ::ng-deep button.save-button:hover,
+:host ::ng-deep button.delete-button:hover {
+  opacity: 0.8;
+  background-color: var(--color-primario) !important;
+}
+
+/* Asegurar que los botones dentro de tablas también tengan el estilo correcto */
+:host ::ng-deep table button,
+:host ::ng-deep .table button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.preview, .form-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+quill-editor {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+}
+
+/* Asegúrate de que el contenedor del editor tenga altura y ancho adecuados */
+/* Puedes personalizar el estilo del editor aquí */
+.ql-toolbar.ql-snow {
+border: 1px solid #dbdbdb; /* Color del borde de Bulma */
+}
+
+.ql-container.ql-snow {
+border: 1px solid #dbdbdb; /* Color del borde de Bulma */
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente de Bulma */
+}
+
+.thumbnail {
+width: 400px; /* Ancho de la miniatura */
+ /* Altura máxima de la miniatura */
+}
+
+.pdf-container {
+margin: 20px 0;
+width: 100%;
+max-width: 1200px; /* Aumentado de 800px a 1200px */
+}
+
+.file-info {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+padding: 10px;
+background-color: var(--color-texto);
+border-radius: 4px;
+}
+
+.file-name {
+font-size: 1rem;
+font-weight: 500;
+color: #363636;
+/* Para nombres largos */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 400px;
+}
+
+.file-details {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+embed {
+width: 100%;
+height: 800px;
+border: 1px solid #ddd;
+border-radius: 4px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Para hacer el contenedor responsivo */
+@media (max-width: 768px) {
+.pdf-container {
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.file-name {
+  max-width: 200px;
+}
+
+embed {
+  height: 500px;
+}
+}
+
+:host ::ng-deep table {
+  background-color: var(--color-fondo) !important;
+  color: var(--color-texto) !important;
+}
+
+:host ::ng-deep tr,
+:host ::ng-deep td,
+:host ::ng-deep th {
+  background-color: var(--color-fondo) !important;
+  color: var(--color-texto) !important;
+  border: 1px solid var(--color-secundario) !important;
+}
+
+:host ::ng-deep button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+}
+
+/* Específico para botones de acción */
+:host ::ng-deep button.upload-button,
+:host ::ng-deep button.save-button,
+:host ::ng-deep button.delete-button {
+  background-color: var(--color-primario, #00b1d2) !important;
+  color: var(--color-texto, #dbdbdb) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+}
+
+:host ::ng-deep button.delete-button {
+  background-color: var(--color-secundario) !important;
+}
+
+:host ::ng-deep button:hover {
+  opacity: 0.8;
+}
+
+/* Actualizar los estilos de texto */
+.title {
+  font-size: var(--tamano-titulo) !important;
+  font-family: var(--fuente-principal) !important;
+}
+
+.subtitle {
+  font-size: var(--tamano-subtitulo) !important;
+  font-family: var(--fuente-principal) !important;
+}
+
+p, span, label {
+  font-size: var(--tamano-parrafo) !important;
+  font-family: var(--fuente-secundaria) !important;
+}

@@ -1,0 +1,81 @@
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Estilo para el mapa */
+  #map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #imageCentered {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 150px;
+    height: 150px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para la vista previa de la imagen */
+  .image-preview, .image-placeholder {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ddd;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .image-placeholder {
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilo para los grupos de entrada */
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo del contenedor del formulario */
+  .box {
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para los campos del formulario en columnas */
+  .field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .field > .control {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .field > .control:last-child {
+    margin-right: 0;
+  }
+  

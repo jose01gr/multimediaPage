@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title">Bienvenido a nuestro Sitio Web</h1>
+    <p class="subtitle">Evaluaciones de Interfaces de Usuario.</p>
+
+    <!-- Carrusel de imágenes -->
+
+    <div class="carousel-container">
+      <!-- Carrusel de imágenes -->
+      <div id="carousel" class="carousel">
+        <div *ngFor="let image of images; let i = index" [ngClass]="{'selected': i === currentIndex, 'prev': i === currentIndex - 1, 'next': i === currentIndex + 1}" class="carousel-item">
+          <img [src]="image.fileUrl" [alt]="'Image ' + i">
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="carousel-buttons is-flex is-justify-content-center is-align-items-center mt-5">
+
+        <button class="button-82-pushable" role="button" (click)="prev()">
+          <span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Anterior</span>
+        </button>
+        <button class="button-82-pushable" role="button" (click)="next()">
+          <span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Siguiente</span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- Cards -->
+    <div class="columns is-multiline">
+      <div class="column is-one-third" *ngFor="let card of [1, 2, 3]">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="subtitle">Tarjeta {{ card }}</h2>
+            <p>Descripción breve de lo que ofrece esta tarjeta. Incluye información relevante y atractiva.</p>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">Leer más</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div *ngIf="videos.length > 0">
+
+      <div *ngFor="let video of videos">
+<<<<<<< HEAD
+        <video controls>
+          <source [src]="video.fileUrl" type="video/mp4">
+          <track *ngFor="let subtitle of subtitles" [src]="subtitle.fileUrl" kind="subtitles" srclang="en" label="English">
+=======
+        <video controls crossorigin="anonymous">
+          <source [src]="video.fileUrl" type="video/mp4" crossorigin="anonymous">
+          <track *ngFor="let subtitle of subtitles" [src]="subtitle.safeUrl" kind="subtitles" srclang="en" label="English">
+>>>>>>> changes
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

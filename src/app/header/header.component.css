@@ -1,0 +1,7 @@
+.navbar{
+    background-color: var(--color-primario);
+}
+
+a{
+    color: var(--color-texto);
+}

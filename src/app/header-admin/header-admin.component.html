@@ -1,0 +1,35 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" >
+        <strong>Perfil De Administrador</strong>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+
+        
+          <!-- Contenedor de botones con espaciado uniforme -->
+          <div class="buttons">
+            <a *ngIf="pdfFiles.length > 0" [href]="pdfFiles[0].fileUrl" target="_blank" class="navbar-item">
+                Manual de Usuario
+            </a>
+              
+            <a class="navbar-item" (click)="goToFile()">
+              Subir Archivos
+            </a>
+            <a class="navbar-item" (click)="goToConfiguracion()">
+              Configurar Colores
+            </a>
+
+            
+            <a class="navbar-item" (click)="goToHome()">
+                Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

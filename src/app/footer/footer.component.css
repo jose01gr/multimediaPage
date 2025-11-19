@@ -1,0 +1,17 @@
+.shadow-box {
+    border: 1px solid #3f3f3f;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+footer.footer {
+  border-top: 1px groove #3f3f3f;
+}
+
+a{
+  color: var(--color-texto)
+}

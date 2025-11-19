@@ -1,0 +1,13 @@
+.navbar-item {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+  }
+  
+  .navbar-item .buttons {
+    margin-right: 10px; /* Espaciado horizontal entre botones */
+  }
+  
+  .button {
+    white-space: nowrap; /* Evita que el texto se desborde */
+  }
+  

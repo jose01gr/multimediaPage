@@ -1,0 +1,1490 @@
+.scene, .scene *{
+	transform-style: preserve-3d;
+}
+.scene{
+
+	/* Escena donde poder rotar la figura completa */
+	/* Le das valores a los rotates */
+	transform: 
+	rotateX(0deg)
+		rotateY(45deg)
+			   rotateZ(0deg);
+	/* Escena donde poder rotar la figura completa */
+			   
+	width: 200px;
+	height: 100px;
+	margin-top: 50px;
+	transform-origin: center;
+	perspective-origin: center center;
+	perspective: 600px;
+}
+
+/* Forma del Triangulo, faltando el border-top para completarlo */
+.tr {
+	width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	position: absolute;
+}
+
+/* Lado de abajo */
+.re {
+	width: 10px;
+	height: 4px;
+	/* Cambias el color de los bordes de la figuras */
+	background-color: #ffffff; 
+	position: absolute;
+}
+
+/* Default - propiedades que comparten todas las figuras */
+[class*="trian-"], [class*="cube"], [class*="rombo"], [class*="trian-big"]{
+	position: absolute;
+	transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1) ;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+} 
+
+/* Default */
+[class*="de-"].tr-bottom{
+	/* Cambias el color de las figuras */
+	border-top: 100px solid var(--color-primario);
+	transform: 
+		rotateZ(-90deg)
+		translateZ(-1.3px)
+	;
+}
+[class*="de-"].tr-top{
+	/* Cambias el color de las figuras */
+	border-top: 100px solid var(--color-primario);
+	transform: rotateZ(-90deg)
+	translateZ(2.75px)
+	;
+
+}	
+[class*="de-"].tr-left {
+	width: 100px !important;
+	transform: rotateX(90deg)
+	rotateY(0deg)
+	translateZ(2px)
+	translateX(0px)
+	translateY(0.70px)
+	;
+}
+[class*="de-"].tr-face-bottom{
+	width: 100px !important;
+	transform: rotateX(90deg)
+	rotateY(90deg)
+	translateZ(-50.2px)
+	translateX(47.5px)
+	translateY(0.70px)
+	;
+}
+[class*="de-"].tr-right{
+	width: 141px !important;
+	transform: rotateX(90deg)
+	rotateY(-45deg)
+	translateZ(-19.65px)
+	translateX(-48.5px)
+	translateY(0.70px)
+	;
+}
+
+/* Omitir esta clase */
+.scene > .trian-1{
+	transform: translateY(10px);
+}
+
+/* Triangulo Small - START */
+.trian-small-1{
+	transform: 
+	translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+	;
+}
+/* Triangulo Small - END */
+
+/* Triangulo Small 2 - START */
+.trian-small-2{
+	transform: 
+	translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+
+	;
+}
+/* Triangulo Small 2 - END */
+
+/* Cuadrado - START */
+.cube{
+	transform: 
+	translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+			translateZ(-1.5px)
+	;
+}
+.cube .trian-3{
+	transform: 
+		rotateZ(180deg)
+		translateX(-100px)
+		translateY(-100px)
+	;
+}
+/* Cuadrado - END */
+
+/* Rombo - START */
+.rombo{
+	transform: 
+	translateX(312px) translateY(85px)
+			translateZ(-1.5px)
+			rotateZ(0deg)
+			rotateX(0deg)
+
+	;
+}
+.rombo .trian-4{
+	transform: 
+		rotateZ(45deg)
+	;
+}
+.rombo .trian-5{
+	transform: 
+		translateX(71.1px)
+		translateY(70px)
+		translateZ(1.39px)
+		rotateZ(-45deg)
+		rotateX(-180deg)
+	;
+}
+/* Rombo - END */
+
+/* Triangulo Mediano - START */
+.trian-medium{
+	transform: 
+	translateY(-18px) translateX(-60px)
+			translateZ(-1.5px)
+			rotateZ(225deg)
+	;
+}
+.trian-medium .trian-7{
+	transform: 
+		rotateZ(45deg)
+	;
+}
+.trian-medium .trian-6{
+	transform: 
+		rotateZ(-45deg)
+	;
+}
+/* Triangulo Mediano - END */
+
+/* Triangulo Grande - START */
+.trian-big-1{
+	transform: 
+	translateY(155px) translateX(100px)
+	rotateZ(135deg)
+	;
+}
+.trian-big-1 .trian-medium-1 .trian-9{
+	transform: 
+		rotateZ(90deg)
+	;
+}
+.trian-big-1 .trian-medium-1 .trian-8{
+	transform: 
+		rotateZ(0deg)
+	;
+}
+.trian-big-1 .trian-medium-2 .trian-10{
+	transform: 
+		rotateZ(-90deg)
+	;
+}
+.trian-big-1 .trian-medium-2 .trian-11{
+	transform: 
+		rotateZ(0deg)
+	;
+}
+.trian-big-1 .trian-medium-1{
+	transform: 
+		rotateZ(270deg)
+		translateX(100px)
+		translateY(-100px)
+		translateZ(-1.5px)
+	;
+}
+.trian-big-1 .trian-medium-2{
+	transform: 
+		rotateZ(90deg)
+		rotateY(180deg)
+	;
+}
+/* Triangulo Grande - END */
+
+/* Triangulo Grande 2 - START */
+.trian-big-2{
+	transform: 
+	translateY(154.5px) translateX(-41.5px)
+	rotateZ(-225deg)
+	;
+}
+.trian-big-2 .trian-medium-3 .trian-12{
+	transform: 
+		rotateZ(90deg)
+	;
+}
+.trian-big-2 .trian-medium-3 .trian-13{
+	transform: 
+		rotateZ(0deg)
+	;
+}
+.trian-big-2 .trian-medium-4 .trian-14{
+	transform: 
+		rotateZ(-90deg)
+	;
+}
+.trian-big-2 .trian-medium-4 .trian-15{
+	transform: 
+		rotateZ(0deg)
+	;
+}
+.trian-big-2 .trian-medium-3{
+	transform: 
+		rotateZ(-270deg)
+		translateY(.45px)
+		translateZ(-1.5px)
+	;
+}
+.trian-big-2 .trian-medium-4{
+	transform: 
+		rotateZ(-90deg)
+		rotateY(180deg)
+		translateX(-100px)
+		translateY(-100px)
+	;
+}
+/* Triangulo Grande 2 - END */
+
+/* ANIMACIONES */
+	/* ANIMACION del Triangulo Small 1 */
+	@keyframes animate-trian-small-1 {
+	/* Figura 1 */
+	0%{
+		transform: 
+			/* New State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+		;
+	}
+	10%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+		;
+	}
+	/* Figura 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+
+			/* New State */
+			translateZ(10px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(10px)
+
+			/* New State */
+			translateY(162px) translateX(-0.5px)
+			rotateZ(180deg)
+			rotateY(180deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(10px)
+			/* Old State */
+			translateY(162px) translateX(-0.5px)
+			rotateZ(180deg)
+			rotateY(180deg)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateY(162px) translateX(-0.5px)
+			rotateZ(180deg)
+			rotateY(180deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateY(162px) translateX(-0.5px)
+			rotateZ(180deg)
+			rotateY(180deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateY(162px) translateX(-0.5px)
+			rotateZ(180deg)
+			rotateY(180deg)
+
+			/* New State */
+			translateZ(10px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(10px)
+
+			/* New State */
+			translateY(210px) translateX(-171.5px)
+			rotateZ(0deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateY(210px) translateX(-171.5px)
+			rotateZ(0deg)
+
+			/* Old State */
+			translateZ(10px)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateY(210px) translateX(-171.5px)
+			rotateZ(0deg)
+			
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 1 de nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateY(210px) translateX(-171.5px)
+			rotateZ(0deg)
+			
+			/* New State */
+			translateZ(10px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(10px)
+
+			/* New State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+
+			/* Old State */
+			translateZ(10px)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+			
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(242px)
+			rotateZ(-135deg)
+			
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+}
+
+	/* ANIMACION del Triangulo Small 2 */
+@keyframes animate-trian-small-2 {
+	/* Figura 1 */
+	0%{
+		transform: 
+			/* New State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+		;
+	}
+	10%{
+		transform: 
+			/* Old State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+			translateZ(-1.5px)
+		;
+	}
+	/* Figura 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+	
+			
+			/* New State */
+			translateZ(-35px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(-35px)
+
+			/* New State */
+			translateY(61.5px) translateX(200.5px)
+			rotateZ(180deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateY(61.5px) translateX(200.5px)
+			rotateZ(180deg)
+			
+			/* Old State */
+			translateZ(-35px)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateY(61.5px) translateX(200.5px)
+			rotateZ(180deg)
+		
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateY(61.5px) translateX(200.5px)
+			rotateZ(180deg)
+		
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateY(61.5px) translateX(200.5px)
+			rotateZ(180deg)
+
+			/* New State */
+			translateZ(-35px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(-35px)
+
+			/* New State */
+			translateY(281.5px) translateX(260.5px)
+			rotateZ(225deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateZ(-35px)
+
+			/* Old State */
+			translateY(281.5px) translateX(260.5px)
+			rotateZ(225deg)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateY(281.5px) translateX(260.5px)
+			rotateZ(225deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 1 de Nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateY(281.5px) translateX(260.5px)
+			rotateZ(225deg)
+
+
+			/* New State */
+			translateZ(-35px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(-35px)
+
+			/* New State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateZ(-35px)
+
+			/* Old State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateY(225.4px) translateX(312.5px)
+			rotateZ(-135deg)
+			
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+}
+
+	/* ANIMACION del cubo */
+@keyframes animate-cube {
+	/* Figura 1 */
+	0%{
+		transform: 
+			/* New State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+			translateZ(-1.5px)
+
+		;
+	}
+	10%{
+		transform: 
+			/* Old State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+			translateZ(-1.5px)
+
+		;
+	}
+	/* Figura 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(-10px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* New State */
+			translateX(100.5px) translateY(62px)
+			rotateZ(0deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* Old State */
+			translateX(100.5px) translateY(62px)
+			rotateZ(0deg)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateX(100.5px) translateY(62px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateX(100.5px) translateY(62px)
+			rotateZ(0deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+	/* Figuro 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateX(100.5px) translateY(62px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(-10px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* New State */
+			translateX(50px) translateY(-150.5px)
+			rotateZ(-20deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* Old State */
+			translateX(50px) translateY(-150.5px)
+			rotateZ(-20deg)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateX(50px) translateY(-150.5px)
+			rotateZ(-20deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figuro 1 de nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateX(50px) translateY(-150.5px)
+			rotateZ(-20deg)
+			/* New State */
+			translateZ(-10px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* New State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateZ(-10px)
+
+			/* Old State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateX(-110.5px) translateY(-17px)
+			rotateZ(0deg)
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+}
+
+	/* ANIMACION del Rombo */
+@keyframes animate-rombo {
+	/* Figura 1 */
+	0%{
+		transform: 
+			/* New State */
+			translateX(312px) translateY(85px)
+			translateZ(-1.5px)
+			rotateZ(0deg)
+			rotateX(0deg)
+		;
+	}
+	10%{
+		transform: 
+			/* Old State */
+			translateX(312px) translateY(85px)
+			translateZ(-1.5px)
+			rotateZ(0deg)
+			rotateX(0deg)
+		;
+	}
+	/* Figuro 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateX(312px) translateY(85px)
+			translateZ(-1.5px)
+			rotateZ(0deg)
+			rotateX(0deg)
+			
+			/* New State */
+			translateZ(-55.5px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+
+			/* New State */
+			translateX(0px) translateY(61.5px)
+			rotateZ(45deg)
+			rotateX(180deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+
+			/* Old State */
+			translateX(0px) translateY(61.5px)
+			rotateZ(45deg)
+			rotateX(180deg)
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateX(0px) translateY(61.5px)
+			rotateZ(45deg)
+			rotateX(180deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateX(0px) translateY(61.5px)
+			rotateZ(45deg)
+			rotateX(180deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateX(0px) translateY(61.5px)
+			rotateZ(45deg)
+			rotateX(180deg)
+			/* New State */
+			translateZ(-55.5px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+		
+			/* New State */
+			translateX(-0.5px) translateY(240px)
+			rotateZ(-45deg)
+			rotateX(180deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+		
+			/* Old State */
+			translateX(-0.5px) translateY(240px)
+			rotateZ(-45deg)
+			rotateX(180deg)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateX(-0.5px) translateY(240px)
+			rotateZ(-45deg)
+			rotateX(180deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 1 de nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateX(-0.5px) translateY(240px)
+			rotateZ(-45deg)
+			rotateX(180deg)
+
+			/* New State */
+			translateZ(-55.5px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+		
+			/* New State */
+			translateX(312px) translateY(85px)
+			rotateZ(0deg)
+			rotateX(0deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateZ(-55.5px)
+		
+			/* Old State */
+			translateX(312px) translateY(85px)
+			rotateZ(0deg)
+			rotateX(0deg)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateX(312px) translateY(85px)
+			rotateZ(0deg)
+			rotateX(0deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateX(312px) translateY(85px)
+			rotateZ(0deg)
+			rotateX(0deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+}
+
+
+	/* ANIMACION Del triangulo mediano */
+@keyframes animate-trian-medium {
+	/* Figura 1 */
+	0%{
+		transform: 
+			/* New State */
+			translateY(-18px) translateX(-60px)
+			translateZ(-1.5px)
+			rotateZ(225deg)
+		;
+	}
+	10%{
+		transform: 
+			/* Old State */
+			translateY(-18px) translateX(-60px)
+			translateZ(-1.5px)
+			rotateZ(225deg)
+		;
+	}
+	/* Figura 2 */
+	20%{
+		transform: 
+
+			/* Old State */
+			translateY(-18px) translateX(-60px)
+			translateZ(-1.5px)
+			rotateZ(225deg)
+
+			/* New State */
+			translateZ(30px)
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(30px)
+
+			/* New State */
+			translateY(-39.2px) translateX(100px)
+			translateZ(-1.5px)
+			rotateZ(45deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(30px)
+
+			/* Old State */
+			translateY(-39.2px) translateX(100px)
+			translateZ(-1.5px)
+			rotateZ(45deg)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateY(-39.2px) translateX(100px)
+			translateZ(-1.5px)
+			rotateZ(45deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateY(-39.2px) translateX(100px)
+			translateZ(-1.5px)
+			rotateZ(45deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+	/* Figuro 3 */
+	60%{
+		transform: 		
+			/* Old State */
+			translateY(-39.2px) translateX(100px)
+			translateZ(-1.5px)
+			rotateZ(45deg)
+
+			/* New State */
+			translateZ(30px)
+		;
+	}
+	62%{
+		transform: 	
+			/* Old State */
+			translateZ(30px)
+		
+			/* New State */
+			translateY(210px) translateX(131px)
+			rotateZ(225deg)
+		;
+	}
+	64%{
+		transform: 		
+			/* Old State */
+			translateY(210px) translateX(131px)
+			rotateZ(225deg)
+
+			/* Old State */
+			translateZ(30px)
+		;
+	}
+	66%{
+		transform: 		
+			/* Old State */
+			translateY(210px) translateX(131px)
+			rotateZ(225deg)
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figuro 1 de nuevo */
+	90%{
+		transform: 		
+			/* Old State */
+			translateY(210px) translateX(131px)
+			rotateZ(225deg)
+			/* New State */
+			translateZ(30px)
+		;
+	}
+	92%{
+		transform: 	
+			/* Old State */
+			translateZ(30px)
+		
+			/* New State */
+			translateY(-18px) translateX(-60px)
+			rotateZ(225deg)
+		;
+	}
+	94%{
+		transform: 		
+			/* Old State */
+			translateY(-18px) translateX(-60px)
+			rotateZ(225deg)
+
+			/* Old State */
+			translateZ(30px)
+		;
+	}
+	96%{
+		transform: 		
+			/* Old State */
+			translateY(-18px) translateX(-60px)
+			rotateZ(225deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 		
+			/* Old State */
+			translateY(-18px) translateX(-60px)
+			rotateZ(225deg)
+
+			/* Old State */
+			translateZ(0px)
+		;
+	}
+}
+	/* Animacion del triangulo grande 1 */
+@keyframes animate-trian-big-1 {
+	/* Figura 1 */
+	0%{
+		transform: 
+		translateY(155px) translateX(100px)
+		rotateZ(135deg)
+		;
+	}
+	10%{
+		transform: 
+		translateY(155px) translateX(100px)
+		rotateZ(135deg)
+		;
+	}
+	/* Figura 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(100px)
+			rotateZ(135deg)
+			/* New State */
+			translateZ(20px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+			
+			/* New State */
+			translateY(-40px) translateX(100px)
+			rotateZ(0deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+
+			/* Old State */
+			translateY(-40px) translateX(100px)
+			rotateZ(0deg)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateY(-40px) translateX(100px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+
+			/* Old State */
+			translateY(-40px) translateX(100px)
+			rotateZ(0deg)
+		;
+	}
+	/* Figura 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateY(-40px) translateX(100px)
+			rotateZ(0deg)
+			
+			/* New State */
+			translateZ(20px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+
+			/* New State */
+			translateY(40px) translateX(100px)
+			rotateZ(90deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+
+			/* Old State */
+			translateY(40px) translateX(100px)
+			rotateZ(90deg)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateY(40px) translateX(100px)
+			rotateZ(90deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	/* Figura 1 de Nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateY(40px) translateX(100px)
+			rotateZ(90deg)
+			/* New State */
+			translateZ(20px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+
+			/* New State */
+			translateY(155px) translateX(100px)
+			rotateZ(135deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateZ(20px)
+
+			/* Old State */
+			translateY(155px) translateX(100px)
+			rotateZ(135deg)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateY(155px) translateX(100px)
+			rotateZ(135deg)
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+			/* Old State */
+			translateY(155px) translateX(100px)
+			rotateZ(135deg)
+		;
+	}
+}
+	/* Animacion del triangulo grande 2 */
+@keyframes animate-trian-big-2 {
+	/* Figure 1 */
+	0%{
+		transform: 
+		translateY(154.5px) translateX(-41.5px)
+		rotateZ(-225deg)
+	}
+	10%{
+		transform: 
+		translateY(154.5px) translateX(-41.5px)
+		rotateZ(-225deg)
+		;
+	}
+	/* Figure 2 */
+	20%{
+		transform: 
+			/* Old State */
+			translateY(154.5px) translateX(-41.5px)
+			rotateZ(-225deg)
+			
+			/* New State */
+			translateZ(-20px)
+		;
+	}
+	22%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+
+			/* New State */
+			translateY(-140px) translateX(200px)
+			rotateZ(0deg)
+		;
+	}
+	24%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+
+			/* Old State */
+			translateY(-140px) translateX(200px)
+			rotateZ(0deg)
+		;
+	}
+	26%{
+		transform: 
+			/* Old State */
+			translateY(-140px) translateX(200px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(0px)
+		;
+	}
+	50%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+
+			/* Old State */
+			translateY(-140px) translateX(200px)
+			rotateZ(0deg)
+		;
+	}
+	/* Figure 3 */
+	60%{
+		transform: 
+			/* Old State */
+			translateY(-140px) translateX(200px)
+			rotateZ(0deg)
+
+			/* New State */
+			translateZ(-20px)
+		;
+	}
+	62%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+
+			/* New State */
+			translateY(140px) translateX(-0.5px)
+			rotateZ(90deg)
+		;
+	}
+	64%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+			
+			/* Old State */
+			translateY(140px) translateX(-0.5px)
+			rotateZ(90deg)
+		;
+	}
+	66%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+			/* State State */
+			translateY(140px) translateX(-0.5px)
+			rotateZ(90deg)
+		;
+	}
+	/* Figure 1 de nuevo */
+	90%{
+		transform: 
+			/* Old State */
+			translateY(140px) translateX(-0.5px)
+			rotateZ(90deg) 
+
+			/* New State */
+			translateZ(-20px)
+		;
+	}
+	92%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+
+			/* New State */
+			translateY(154.5px) translateX(-41.5px)
+			rotateZ(-225deg)
+		;
+	}
+	94%{
+		transform: 
+			/* Old State */
+			translateZ(-20px)
+			
+			/* Old State */
+			translateY(154.5px) translateX(-41.5px)
+			rotateZ(-225deg)
+		;
+	}
+	96%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+			/* State State */
+			translateY(154.5px) translateX(-41.5px)
+			rotateZ(-225deg)
+		;
+	}
+	100%{
+		transform: 
+			/* Old State */
+			translateZ(0px)
+			/* Old State */
+			translateY(154.5px) translateX(-41.5px)
+			rotateZ(-225deg)
+		;
+	}
+
+}
+
+/**
+ * ANIMACIONES ASGINACION
+ 
+ */
+
+
+ .trian-big-1{
+	animation-name: animate-trian-big-1;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay: 5s;
+
+ }
+ .trian-big-2{
+	animation-name: animate-trian-big-2;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }
+ .trian-medium{
+	animation-name: animate-trian-medium;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }
+ .trian-small-1{
+	animation-name: animate-trian-small-1;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }
+ .trian-small-2{
+	animation-name: animate-trian-small-2;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }
+.cube{
+	animation-name: animate-cube;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }
+.rombo{
+	animation-name: animate-rombo;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode:forwards;
+	animation-delay:5s;
+ }

@@ -1,0 +1,94 @@
+:host ::ng-deep button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border-radius: 4px !important;
+  margin: 5px !important;
+  padding: 10px 20px !important;
+}
+
+/* Estilos más específicos para los botones de admin */
+:host ::ng-deep form button.save-button,
+:host ::ng-deep .save-button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+  transition: opacity 0.3s ease !important;
+  font-family: var(--fuente-secundaria) !important;
+}
+
+:host ::ng-deep form button.reset-button,
+:host ::ng-deep .reset-button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+  transition: opacity 0.3s ease !important;
+  font-family: var(--fuente-secundaria) !important;
+}
+
+/* Remover cualquier estilo de Bulma o Angular Material */
+:host ::ng-deep .button.is-light,
+:host ::ng-deep .button.is-primary,
+:host ::ng-deep .mat-button-base {
+  background: none;
+  border: none;
+}
+
+/* Asegurar que los estilos hover no sean sobrescritos */
+:host ::ng-deep form button.save-button:hover,
+:host ::ng-deep .save-button:hover,
+:host ::ng-deep form button.reset-button:hover,
+:host ::ng-deep .reset-button:hover {
+  opacity: 0.8;
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+}
+
+:host ::ng-deep form button.reset-button:hover {
+  background-color: var(--color-primario) !important;
+}
+
+/* Asegurar que los estilos se mantengan incluso con otras clases */
+:host ::ng-deep button[type="submit"],
+:host ::ng-deep button[type="button"] {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+}
+
+:host ::ng-deep button[type="button"].reset-button {
+  background-color: var(--color-primario) !important;
+}
+
+/* Estilos específicos para los botones */
+:host ::ng-deep .control button.save-button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+}
+
+:host ::ng-deep .control button.reset-button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+}
+
+/* Remover estilos de Bulma */
+:host ::ng-deep .button.is-primary,
+:host ::ng-deep .button.is-warning,
+:host ::ng-deep .button.is-light {
+  background: none;
+  border: none;
+}

@@ -1,0 +1,56 @@
+/* styles.css */
+@import '~quill/dist/quill.snow.css';
+
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #000000;
+  --color-titulo: #333333;
+  --color-subtitulo: #555555;
+  --tamano-titulo: 2em;
+  --tamano-subtitulo: 1.5em;
+  --tamano-parrafo: 1em;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+h1 {
+  color: var(--color-titulo);
+  font-size: var(--tamano-titulo);
+}
+h2 {
+  color: var(--color-subtitulo);
+  font-size: var(--tamano-subtitulo);
+}
+p,a {
+  font-size: var(--tamano-parrafo);
+}
+
+  body {
+    font-family: var(--font-family-main);
+    background-color: var(--neutral-color-dark);
+    color: var(--neutral-color-dark);
+  }
+
+
+
+  .button.is-primary {
+    background-color: var(--color-subtitulo);
+    color: var(--secondary-color);
+  }
+
+  .input {
+    border: 1px solid var(--neutral-color-dark);
+  }
+
+  /* login.component.css */
+.box {
+    padding: 20px; /* Espaciado interno para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+
+.custom-link {
+    color: var(--secondary-color); /* Reemplaza con el color que desees, usando el color secundario de Bulma */
+}
+

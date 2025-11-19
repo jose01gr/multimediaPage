@@ -1,0 +1,13 @@
+:host ::ng-deep button.login-button {
+  background-color: var(--color-primario) !important;
+  color: var(--color-texto) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+}
+
+:host ::ng-deep button.login-button:hover {
+  opacity: 0.8;
+}

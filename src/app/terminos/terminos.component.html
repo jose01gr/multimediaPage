@@ -1,0 +1,14 @@
+<app-header></app-header>
+    <div class="container">
+        <div class="section">
+        <h1 class="title has-text-centered">Términos y Condiciones</h1>
+
+        <!-- Caja de texto con los términos -->
+        <div class="box ql-container ql-snow">
+            <div class="ql-editor" *ngFor="let file of wysiwygFiles">
+                <div [innerHTML]="file.textContent"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+<app-footer></app-footer>
